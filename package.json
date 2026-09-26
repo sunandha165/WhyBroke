@@ -1,0 +1,20 @@
+{
+  "name": "whybroke",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WhyBroke - Regression Investigation AI. Git tells you WHAT changed, WhyBroke tells you WHY it broke.",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n SERVER,CLIENT -c blue,green \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "build": "npm run build --workspace=server && npm run build --workspace=client",
+    "test": "npm run test --workspace=server && npm run test --workspace=client",
+    "lint": "npm run lint --workspace=server && npm run lint --workspace=client",
+    "setup:demo": "node scripts/setup-demo-repo.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

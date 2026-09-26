@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# Environment files - never commit secrets
+.env
+.env.local
+.env.*.local
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.suo
+*.user
+.vscode/settings.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vitest / Jest cache
+.vitest-cache/
+coverage/
+
+demo-repo/.git/
